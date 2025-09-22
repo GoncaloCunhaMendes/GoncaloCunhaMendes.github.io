@@ -3,13 +3,28 @@
 }
 
 .fotografias {
-    display: flex;
-    flex-direction: row;
-    flex-wrap :wrap;
-    gap: 10px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 10px;
 }
 
-.fotografias img{
-    width: 150px;
-    border-radius: 20px;
+.fotografias img {
+  width: 150px;
+  border-radius: 20px;
+}
+
+.poema :nth-child(1) {
+  font-size: 18px;
+  display: inline;
+  background-color: rgb(202, 249, 255);
+}
+
+table, th, td {
+  border: 1px solid black;
+  text-align: left;
+
+}
+td{
+  color: rgb(25, 0, 255);
 }
