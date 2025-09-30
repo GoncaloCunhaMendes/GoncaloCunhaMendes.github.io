@@ -1,0 +1,403 @@
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    line-height: 1.6;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+main {
+    flex: 1 0 auto;
+    padding: 30px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.tituloPagina {
+    text-align: center;
+    background-color: #2e7d32;
+    color: white;
+    margin: 0;
+    padding: 15px 0;
+    font-size: 2em;
+    font-weight: bold;
+}
+
+nav {
+    background-color: #333;
+    overflow: hidden;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 14px 20px;
+    display: inline-block;
+    font-size: 1.1em;
+    transition: background-color 0.3s ease;
+}
+
+nav a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+.caixa-texto {
+    background-color: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    margin-bottom: 30px;
+}
+
+.caixa-texto h2,
+.caixa-texto h3,
+.caixa-texto h4 {
+    color: #2e7d32;
+    margin-bottom: 15px;
+}
+
+.caixa-texto p a {
+    color: #2e7d32;
+    text-decoration: none;
+    margin: 0 10px;
+    font-weight: bold;
+}
+
+.caixa-texto p a:hover {
+    text-decoration: underline;
+}
+
+.banner-img {
+    display: block;
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    margin: 0 auto 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.imagens-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 30px;
+    padding: 0 20px;
+}
+
+.imagem {
+    width: 300px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.imagem:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.fotografias {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.fotografias img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.fotografias img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.caixa-texto iframe {
+    width: 100%;
+    max-width: 600px;
+    height: 315px;
+    margin: 20px auto;
+    display: block;
+    border-radius: 8px;
+}
+
+.poema :nth-child(1) {
+    font-size: 18px;
+    display: inline;
+    background-color: rgb(202, 249, 255);
+}
+
+table {
+    width: 100%;
+    max-width: 600px;
+    margin: 20px auto;
+    border-collapse: collapse;
+}
+
+th,
+td {
+    padding: 10px;
+    border: 1px solid #333;
+    text-align: left;
+}
+
+th {
+    background-color: #2e7d32;
+    color: white;
+}
+
+td {
+    color: #1900ff;
+}
+
+.caixa-texto iframe.map {
+    border: 0;
+    width: 100%;
+    height: 400px;
+    margin-top: 20px;
+    border-radius: 8px;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+    width: 100%;
+    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Container principal para a página de localização */
+.container-localizacao {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Container para centralizar a imagem */
+.imagem-container-central {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.imagem-central {
+    max-width: 600px;
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Layout responsivo para localização */
+.mapa-texto-container {
+    display: flex;
+    gap: 30px;
+    align-items: flex-start;
+    margin-top: 20px;
+}
+
+.texto-localizacao {
+    flex: 1;
+    background-color: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.mapa-localizacao {
+    flex: 1;
+    min-width: 0; /* Permite que o mapa se adapte ao container */
+}
+
+.mapa-localizacao iframe {
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.tituloLocalizacao {
+    color: #2e7d32;
+    text-align: center;
+    margin: 20px 0;
+    font-size: 2em;
+}
+
+/* NOVO CSS - Imagem com texto sobreposto */
+.container-imagem-texto {
+    display: flex;
+    justify-content: center;
+    margin: 30px 0;
+}
+
+.imagem-com-texto {
+    position: relative;
+    max-width: 800px;
+    width: 100%;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.imagem-com-texto img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.imagem-com-texto:hover img {
+    transform: scale(1.05);
+}
+
+.texto-sobreposto {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
+    color: white;
+    padding: 30px 20px 20px;
+}
+
+.texto-sobreposto h4 {
+    color: white;
+    margin: 0 0 10px 0;
+    font-size: 1.5em;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
+}
+
+.texto-sobreposto p {
+    margin: 0;
+    font-size: 1.1em;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+    line-height: 1.5;
+}
+.video-background {
+    position: relative;
+    width: 100%;
+    height: 400px;
+    overflow: hidden;
+    margin: 40px 0;
+}
+
+.video-background video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+}
+
+.video-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.video-overlay h2 {
+    color: white;
+    font-size: 3em;
+    text-align: center;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    padding: 0 20px;
+}
+
+
+@media (max-width: 600px) {
+    
+    main {
+        padding: 15px 10px;
+    }
+    
+    .caixa-texto {
+        padding: 20px 15px;
+    }
+    
+    .tituloPagina {
+        font-size: 1.5em;
+        padding: 12px 0;
+    }
+    
+    
+    nav a {
+        display: block;
+        padding: 12px;
+        font-size: 1em;
+    }
+    
+    
+    .mapa-texto-container {
+        flex-direction: column;
+        gap: 20px;
+    }
+    
+    .texto-localizacao,
+    .mapa-localizacao {
+        width: 100%;
+    }
+    
+    .mapa-localizacao iframe {
+        height: 300px;
+    }
+    
+   
+    .imagens-container {
+        flex-direction: column;
+    }
+    
+    .imagem {
+        width: 100%;
+        max-width: 400px;
+    }
+    
+   
+    .fotografias {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .imagem-com-texto img {
+        height: 250px;
+    }
+    
+    
+    .caixa-texto iframe {
+        height: 250px;
+    }
+}

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A minha Cidade</title>
+    <link rel="stylesheet" href="stylesmain.css">
+</head>
+
+<body class="multimedia">
+    <header>
+        <h1 class="tituloPagina">A minha Cidade</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="local.html">Localização</a>
+            <a href="multimedia.html">Multimédia</a>
+            <a href="info.html">Informação</a>
+        </nav>
+    </header>
+    <main>
+        <div class="caixa-texto">
+            <img src="imagens/banner-cidade.png" class="banner-img" alt="Banner da cidade" />
+            <h2>Multimédia</h2>
+            <p>Nesta página encontra conteúdos Multimédia</p>
+            <p>
+                <a href="#fotos">Fotografias</a>
+                <a href="#video">Vídeo</a>
+                <a href="#poema">Poema</a>
+                <a href="#sobreposta">Imagem com Texto</a>
+            </p>
+
+            <section id="fotos">
+                <h3>Fotografias</h3>
+                <div class="fotografias">
+                    <img src="imagens/avenidadaliberdade.jpg" alt="Avenida Da Liberdade">
+                    <img src="imagens/belem.jpg" alt="Belem">
+                    <img src="imagens/eletrico.jpg" alt="Elétrico">
+                    <img src="imagens/mosteiroJeronimos.jpg" alt="Mosteiro Dos Jerónimos">
+                    <img src="imagens/ponte25abril.jpg" alt="Ponte 25 De Abril">
+                    <img src="imagens/pracadocomercio.jpg" alt="Praça Do Comércio">
+                    <img src="imagens/terreirodopaco.jpg" alt="Terreiro Do Paço">
+                    <img src="imagens/aquedutoaguas.png" alt="Aqueduto Das Águas Livres">
+                </div>
+            </section>
+
+            <section id="video">
+                <h3>Vídeo</h3>
+                <iframe width="100%" height="315" src="https://www.youtube.com/embed/bin1J-upU-w?si=U2t_s0u18CSHgROx"
+                    title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </section>
+
+            <section id="poema">
+                <h3>Poesia</h3>
+                <div class="poema">
+                    <p>Lisboa, Minha Querida Maluca</p>
+                    <p>Oh Lisboa, cidade das sete colinas,<br>
+                        Onde o Tejo dança com ondas tão finas!<br>
+                        Teus elétricos sobem, rangem, e vão,<br>
+                        Como avós teimosos com o coração na mão.</p>
+                    <p>No Bairro Alto, a noite é um fado,<br>
+                        Guitarras choram, o vinho é sagrado.<br>
+                        Na Alfama, o cheiro a sardinha no ar,<br>
+                        Faz até os gatos querer dançar!</p>
+                    <p>Teus miradouros, que vistas de postal,<br>
+                        Mas subir até lá? Um treino fatal!<br>
+                        Pastéis de Belém, pecado guloso,<br>
+                        Cada dentada é um beijo formoso.</p>
+                    <p>Lisboa, és velha, mas cheia de graça,<br>
+                        Com ruas tortas que a alma abraça.<br>
+                        Entre tuk-tuks e turistas a mil,<br>
+                        És a rainha do meu coração subtil!</p>
+                </div>
+            </section>
+
+
+            <section id="sobreposta">
+                <h3>Lisboa em Destaque</h3>
+                <div class="container-imagem-texto">
+                    <div class="imagem-com-texto">
+                        <img src="imagens/ponte25abril.jpg" alt="A Ponte 25 de Abril">
+                        <div class="texto-sobreposto">
+                            <h4>Ponte 25 de Abril</h4>
+                            <p>Quem não viu Lisboa, não viu coisa boa.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="video-background">
+                <video autoplay muted loop>
+                    <source src="imagens/lisboavideo.mp4" type="video/mp4">
+                </video>
+                <div class="video-overlay">
+                    <h3>Lisboa: Onde a história encontra o futuro</h3>
+                </div>
+            </section>
+        </div>
+    </main>
+    <footer>
+        <p>DIW 2025</p>
+    </footer>
+</body>
+
+</html>

@@ -1,6 +1,546 @@
 body {
-    background-color: #b3b3b3;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-image: url('images/fundo.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    position: relative;
 }
-img {
-    width: 300px;
+
+header {
+    height: 7vh;
+    background-color: #333;
+    font-size: 4vh;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    position: sticky;
+    top: 0;
+    z-index: 60;
+}
+
+header nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    height: 100%;
+    margin: 0;
+}
+
+header nav ul li {
+    margin: 0 20px;
+    text-align: center;
+    position: relative;
+    max-width: 100%;
+    max-height: 40px;
+    min-width: 40px;
+    min-height: 20px;
+    flex-shrink: 0;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    padding: 10px 15px;
+    display: block;
+    transition: all 0.3s ease;
+}
+
+header nav ul li a:hover {
+    background-color: #555;
+    color: #fff;
+    border-radius: 5px;
+}
+
+section {
+    padding: 20px;
+}
+
+#home {
+    height: auto;
+    text-align: center;
+    padding-top: 15vh;
+    position: relative;
+    min-height: 90vh;
+}
+
+#home h1 {
+    font-size: 5vh;
+    color: white;
+    position: relative;
+    z-index: 10;
+}
+
+#home p {
+    font-size: 3vh;
+    color: white;
+    max-width: 90%;
+    margin: 0 auto 20px;
+    z-index: 10;
+}
+
+#home .overlay-image {
+    z-index: 1;
+    max-width: 90%; 
+    max-height: 40vh;
+    min-width: 0%; 
+    min-height: 20vh;
+    margin: 0 auto;
+}
+
+#lab {
+    background-color: #1a252f;
+    height: auto;
+    text-align: center;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+#lab h2 {
+    font-size: 4vh;
+    color: #b0c4de;
+    text-align: left;
+}
+
+#lab p {
+    font-size: 2.5vh;
+    color: #b0c4de;
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+#lab button {
+    font-size: 3vh;
+    padding: 20px 40px;
+    margin: 20px;
+    background-color: #007BFF;
+    border: none;
+    color: white;
+    border-radius: 500px;
+    width: 60%;
+    max-width: 300px;
+}
+
+#lab button a {
+    text-decoration: none;
+    color: white;
+    display: block;
+    width: 100%;
+    text-align: center;
+}
+
+#lab button:hover {
+    background-color: #0056b3;
+}
+
+#cadeira {
+    background-color: rgba(240, 248, 255, 0.7);
+    height: auto;
+    min-height: 80vh;
+    padding: 40px 20px; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 30px; 
+    box-sizing: border-box;
+    background-color: #36526b;
+}
+
+#cadeira h2 {
+    font-size: 5vh;
+    color: #1a252f;
+    margin: 0;
+    text-align: center;
+}
+
+#cadeira p {
+    font-size: 3vh;
+    color: #333;
+    margin: 0 0 15px;
+    text-align: center;
+    max-width: 80%;
+}
+
+#cadeira ul {
+    list-style-type: disc;
+    padding-left: 20px;
+    margin: 0 0 20px;
+    max-width: 80%;
+    text-align: left;
+}
+
+#cadeira ul li {
+    font-size: 2.5vh;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+#cadeira .image-container {
+    width: 100%;
+    max-width: 600px; 
+    height: auto;
+    margin: 0 auto 20px;
+}
+
+#cadeira .image-container img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+#cadeira .labs {
+    text-align: center;
+}
+
+#cadeira .labs a {
+    font-size: 2.5vh;
+    color: #007BFF;
+    text-decoration: none;
+    margin: 0 15px;
+}
+
+#cadeira .labs a:hover {
+    text-decoration: underline;
+}
+
+#cadeira ul li .html-color {
+    color: #ff7400; 
+}
+
+#cadeira ul li .css-color {
+    color: #26e4c4; 
+}
+
+#cadeira ul li .js-color {
+    color: #f0db4f;
+}
+
+#cadeira ul li .react-color {
+    color: #61dafb; 
+}
+
+p#test {
+    color: white;
+}
+
+footer {
+    height: 10vh;
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    text-align: center;
+    padding-top: 2vh;
+    font-size: 2vh;
+}
+
+.hamburger {
+    display: none; 
+}
+
+#menu-toggle {
+    display: none;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-image: url('images/fundo.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    position: relative;
+}
+
+header {
+    height: 7vh;
+    background-color: #333;
+    font-size: 4vh;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+header nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    height: 100%;
+    margin: 0;
+}
+
+header nav ul li {
+    margin: 0 20px;
+    text-align: center;
+    position: relative;
+    max-width: 100%;
+    max-height: 40px;
+    min-width: 40px;
+    min-height: 20px;
+    flex-shrink: 0;
+}
+
+header nav ul li a {
+    color: #fff;
+    font-weight: bold;
+    padding: 10px 15px;
+    display: block;
+    transition: all 0.3s ease;
+}
+
+header nav ul li a:hover {
+    background-color: #555;
+    color: #fff;
+    border-radius: 5px;
+}
+
+section {
+    padding: 20px;
+}
+
+#home {
+    height: auto;
+    text-align: center;
+    padding-top: 15vh;
+    position: relative;
+    min-height: 90vh;
+}
+
+#home h1 {
+    font-size: 5vh;
+    color: white;
+    position: relative;
+    z-index: 10;
+}
+
+#home p {
+    font-size: 3vh;
+    color: white;
+    max-width: 90%;
+    margin: 0 auto 20px;
+    z-index: 10;
+}
+
+#home .overlay-image {
+    z-index: 1;
+    max-width: 90%; 
+    max-height: 40vh;
+    min-width: 0%; 
+    min-height: 20vh;
+    margin: 0 auto;
+}
+
+#lab {
+    background-color: #1a252f;
+    height: auto;
+    text-align: center;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+#lab h2 {
+    font-size: 4vh;
+    color: #b0c4de;
+    text-align: left;
+}
+
+#lab p {
+    font-size: 2.5vh;
+    color: #b0c4de;
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+#lab button {
+    font-size: 3vh;
+    padding: 20px 40px;
+    margin: 20px;
+    background-color: #007BFF;
+    border: none;
+    color: white;
+    border-radius: 500px;
+    width: 60%;
+    max-width: 300px;
+}
+
+#lab button a {
+    text-decoration: none;
+    color: white;
+    display: block;
+    width: 100%;
+    text-align: center;
+}
+
+#lab button:hover {
+    background-color: #0056b3;
+}
+
+#cadeira {
+    background-color: rgba(240, 248, 255, 0.7);
+    height: auto;
+    min-height: 80vh;
+    padding: 40px 20px; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 30px; 
+    
+    background-color: #36526b;
+}
+
+#cadeira h2 {
+    font-size: 5vh;
+    color: #1a252f;
+    margin: 0;
+    text-align: center;
+}
+
+#cadeira p {
+    font-size: 3vh;
+    color: #333;
+    margin: 0 0 15px;
+    text-align: center;
+    max-width: 80%;
+}
+
+#cadeira ul {
+    list-style-type: disc;
+    padding-left: 20px;
+    margin: 0 0 20px;
+    max-width: 80%;
+    text-align: left;
+}
+
+#cadeira ul li {
+    font-size: 2.5vh;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+#cadeira .image-container {
+    width: 100%;
+    max-width: 600px; 
+    height: auto;
+    margin: 0 auto 20px;
+}
+
+#cadeira .image-container img {
+    width: 100%;
+    height: auto;
+  
+}
+
+#cadeira .labs {
+    text-align: center;
+}
+
+#cadeira .labs a {
+    font-size: 2.5vh;
+    color: #007BFF;
+    margin: 0 15px;
+}
+
+#cadeira .labs a:hover {
+    text-decoration: underline;
+}
+
+#cadeira ul li .html-color {
+    color: #ff7400; 
+}
+
+#cadeira ul li .css-color {
+    color: #26e4c4; 
+}
+
+#cadeira ul li .js-color {
+    color: #f0db4f;
+}
+
+#cadeira ul li .react-color {
+    color: #61dafb; 
+}
+
+p#test {
+    color: white;
+}
+
+footer {
+    height: 10vh;
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    text-align: center;
+    padding-top: 2vh;
+    font-size: 2vh;
+}
+
+.hamburger {
+    display: none; 
+}
+
+#menu-toggle {
+    display: none;
+}
+
+@media (max-width: 600px) {
+    header {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10px;
+    }
+
+    .hamburger {
+        display: block;
+        font-size: 4vh;
+        color: white;
+        cursor: pointer;
+        padding: 10px;
+        align-self: flex-start;
+    }
+
+    nav {
+        display: none;
+        width: 100%;
+        background-color: rgba(128, 128, 128, 0.9);
+        position: absolute;
+        top: 7vh;
+        left: 0;
+        z-index: 200;
+    }
+
+    #menu-toggle:checked + .hamburger + nav {
+        display: flex;
+        flex-direction: column;
+    }
+
+    header nav ul {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    header nav ul li {
+        margin: 10px 0;
+        width: 100%;
+        text-align: center;
+    }
+
+    header nav ul li a {
+        padding: 15px;
+        width: 100%;
+        box-sizing: border-box;
+    }
 }
