@@ -1,0 +1,96 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    text-align: center;
+    background-color: #f0f0f0;
+    color: #333;
+    margin: 0;
+    padding: 20px;
+}
+
+h1 {
+    font-size: 3em;
+    color: #1a73e8;
+    transition: color 0.3s ease;
+    cursor: pointer;
+}
+
+#descricao {
+    font-size: 1.5em;
+    color: #555;
+}
+
+button {
+    margin: 15px;
+    padding: 15px;
+    border: none;
+    font-size: 1.2em;
+    cursor: pointer;
+    background-color: #ffeb3b;
+    color: #333;
+    border-radius: 10px;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #ff9800;
+    transform: scale(1.1);
+}
+
+button:active {
+    transform: scale(0.9);
+}
+
+#mudaDeCor, #mudaFundo, #counter {
+    margin-top: 40px;
+}
+
+footer {
+    margin-top: 50px;
+    font-size: 1.2em;
+    color: #888;
+}
+
+input[type="text"] {
+    padding: 10px;
+    font-size: 1.2em;
+    border-radius: 5px;
+    border: 2px solid #ccc;
+}
+
+input[type="text"]:focus {
+    border-color: #ff9800;
+}
+
+form button {
+    background-color: #4caf50;
+    color: white;
+}
+
+form button:hover {
+    background-color: #388e3c;
+}
+
+footer p {
+    font-style: italic;
+}
+
+#imagem {
+    width: 100%; 
+    max-width: 500px; 
+    margin-top: 20px;
+    border-radius: 15px; 
+    transition: transform 0.3s ease; 
+}
+
+
+#imagem:hover {
+    transform: scale(1.1);
+}
+

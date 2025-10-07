@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab4 - JavaScript maluco</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <h1 id="mudaTexto" onmouseover="mouseover()" onmouseout="mouseout()">Bem-vindo à minha página maluca!</h1>
+        <p id="descricao">Passa por cima do título para ver o que pode acontece -_-</p>
+         <img src="images/logo.png" alt="Imagem engraçada" id="imagem"/>
+    </header>
+
+    <div id="mudaDeCor">
+        <h2>Pinta-me da cor que pretenderes ou então deixa-me assim (>‿◠)✌</h2>
+        <button class="colorButton" data-color="red" onclick="pintaTexto('red')">Vermelho</button>
+        <button class="colorButton" data-color="green" onclick="pintaTexto('green')">Verde</button>
+        <button class="colorButton" data-color="blue" onclick="pintaTexto('blue')">Azul</button>
+    </div>
+
+    <div id="mudaFundo">
+        <h2>Escolhe uma cor para o fundo (se te apetecer claro)</h2>
+        <form id="colorForm" onsubmit="mudaFundo(event)">
+            <input type="text" id="colorInput" placeholder="Cor em ingles">
+            <button type="submit">Muda a cor</button>
+        </form>
+    </div>
+
+    <div id="counter">
+        <h3>Contador de ego: <span id="count">1</span></h3>
+        <button id="increaseCount" onclick="contador()">Aumente o seu ego</button>
+    </div>
+
+    <footer>
+        <p>JavaScript é fixe!</p>
+    </footer>
+
+    <script src="scripts/main.js"></script>
+</body>
+</html>
