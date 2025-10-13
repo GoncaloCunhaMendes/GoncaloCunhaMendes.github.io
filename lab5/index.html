@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>God Javascript</title>
+</head>
+
+<body>
+    <h1>Javascript God</h1>
+    <section>
+        <p id="passa">1. Passa por aqui!</p>
+    </section>
+
+    <script>
+        const passa = document.querySelector('#passa');
+
+        function onMouseOver() {
+            passa.textContent = "1. Obrigado por passares!"
+        }
+
+        function onMouseOut() {
+            passa.textContent = "1. Passa por aqui";
+        }
+
+        passa.onmouseover = onMouseOver;
+        passa.onmouseout = onMouseOut;
+
+    </script>
+
+
+
+    <section id="pinta">
+
+        <p>2. pinta-me
+            <button id="red">red</button>
+            <button id="green">green</button>
+            <button id="blue">blue</button>
+        </p>
+
+
+
+    </section>
+
+    <script>
+        //variavies
+
+        const pinta = document.querySelector("#pinta");
+        // Funções / ações / handlers 
+
+        pintaRed = function () {
+            pinta.style.color = "red";
+        }
+
+        //Event Listeners
+
+
+        document.querySelector("#red").onclick = pintaRed; //ação
+        document.querySelector("#green").onclick = () => { pinta.style.color = "green" };
+        document.querySelector("#blue").onclick = () => { pinta.style.color = "blue" };
+
+    </script>
+
+    <section>
+        <label for="palavras">3. Exprimenta escrever...</label>
+        <input id="palavra" type="text">
+    </section>
+
+   <br>
+
+    <script>
+        // Variaveis 
+        const inputColorir = document.querySelector('#palavra');
+
+        const cores = ['red', 'blue', 'green'];
+
+        let index = 0;
+
+
+        //Funções/ações/ handlers
+
+        function colorir() {
+            inputColorir.style.background = cores[index];
+            index = (index + 1) % cores.length;
+
+        }
+
+        //Event listeners
+        inputColorir.onkeyup = colorir;
+
+    </script>
+
+    <section id="section-cor">
+        <label for="text-cor">4. Experimente uma cor em inglês</label>
+        <input id="text-cor" type="text">
+        <button>Submeter</button>
+    </section>
+
+    <script>
+        // Variáveis
+        const inputCor = document.querySelector("#text-cor");
+        const buttonCor = document.querySelector("#section-cor button");
+
+        // Funções / Ações / Handlers
+        function colorirBackground() {
+            document.querySelector("body").style.background = inputCor.value;
+        }
+
+        // Event listeners
+        buttonCor.onclick = colorirBackground;
+    </script>
+
+
+    <section>
+        <p>5. Escolha uma cor
+            <select id="cor-opcao">
+                <option value="white">Branco</option>
+                <option value="red">Vermelho</option>
+                <option value="blue"><A></A>zul</option>
+            </select>
+        </p>
+
+    </section>
+
+
+    <script>
+        const cor = document.querySelector("#cor-opcao");
+
+        function alterarCorFundo() {
+            document.body.style.backgroundColor = cor.value;
+        }
+
+        cor.onclick = alterarCorFundo;
+    </script>
+
+    <section>
+        <p>6. Contador: <span id="contador">0</span>
+            <button id="botao">Aumentar contador</button>
+        </p>
+
+    </section>
+
+    <script>
+
+        if (!localStorage.getItem('counter')) {
+            localStorage.setItem('counter', 0);
+        }
+
+        document.querySelector('#contador').textContent = localStorage.getItem('counter');
+
+        function count() {
+            let counter = localStorage.getItem('counter');
+            counter++;
+            document.querySelector('#contador').textContent = counter;
+            localStorage.setItem('counter', counter);
+        }
+
+        document.querySelector('#botao').onclick = count;
+    </script>
+
+    <section>
+        <form id="caixas">
+            <input type="text" id="caixa1" placeholder="Insira o nome">
+            <input type="text" id="caixa2" placeholder="Insira a idade">
+            <input type="submit" value="Submeter">
+        </form>
+
+        <p id="mensagem"></p>
+    </section>
+
+    <script>
+        
+        document.querySelector('#caixas').onsubmit = (e) => {
+
+            e.preventDefault(); 
+
+            const nome = document.querySelector('#caixa1').value;
+            const idade = document.querySelector('#caixa2').value;
+
+         
+            document.querySelector('#mensagem').textContent = `Olá, o ${nome} tem ${idade}!`;
+
+            document.querySelector('#caixa1').value = '';
+            document.querySelector('#caixa2').value = '';
+        };
+    </script>
+
+
+
+
+    <section>
+        <p>8. Contador Automático: <span id="autoCounter">0</span></p>
+    </section>
+
+    <script>
+
+        let countNum = 0;
+
+        function count() {
+            countNum++;
+            document.querySelector('#autoCounter').textContent = countNum;
+        }
+
+        setInterval(count, 1000);
+    </script>
+
+
+
+
+
+</body>
+
+</html>
