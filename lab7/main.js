@@ -1,13 +1,12 @@
 document.addEventListener('DOMContentLoaded', () => {
     fetchProdutos();
-    exibirCesto();
     atualizaCesto();
     mostrarCesto();
 });
 
 function fetchProdutos() {
     fetch('https://deisishop.pythonanywhere.com/products/')
-        .then(response => response.json())  
+        .then(response => response.json())
         .then(produtos => {
             const filtroPreco = document.querySelector('#preco').value;
             const termoPesquisa = document.querySelector('#pesquisa').value.toLowerCase();
@@ -19,16 +18,16 @@ function fetchProdutos() {
 
                 return correspondeCategoria && correspondePesquisa;
             });
-            
+
             if (filtroPreco === 'crescente') {
                 produtosFiltrados.sort((a, b) => a.price - b.price);
             } else if (filtroPreco === 'decrescente') {
                 produtosFiltrados.sort((a, b) => b.price - a.price);
             }
 
-            carregarProdutos(produtosFiltrados); 
+            carregarProdutos(produtosFiltrados);
         })
-        .catch(error => console.error('Erro ao buscar produtos:', error));  
+        .catch(error => console.error('Erro ao buscar produtos:', error));
 }
 
 
@@ -146,6 +145,45 @@ function atualizaCesto() {
     mostrarCesto();
 }
 
+function finalizarCompra() {
+    const produtosSelecionados = JSON.parse(localStorage.getItem('produtos-selecionados')) || [];
+    const estudante = document.querySelector('#estudante').checked;
+    const cupaoDesconto = document.querySelector('#cupaoDesconto').value;
+
+
+    const produtoIds = produtosSelecionados.map(produto => produto.id);
+
+    const dadosCompra = {
+        products: produtoIds,
+        student: estudante,
+        coupon: cupaoDesconto,
+    };
+
+
+    fetch('https://deisishop.pythonanywhere.com/buy/', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(dadosCompra),
+    })
+        .then(response => response.json())
+        .then(data => {
+
+            const resultadoCompra = document.querySelector('#resultado-compra');
+            resultadoCompra.innerHTML = `
+                <h3>Resumo da Compra</h3>
+                <p>Valor final a pagar: ${data.totalCost}€</p>
+                <p>Referência de pagamento: ${data.reference}</p>`
+
+        })
+
+    const resultadoCompra = document.getElementById("resultado-compra");
+
+    resultadoCompra.style.display = "block";
+}
+
+
 document.querySelector('#pesquisa').addEventListener('input', function () {
     fetchProdutos();
 });
@@ -154,6 +192,6 @@ document.querySelector('#preco').addEventListener('change', function () {
     fetchProdutos();
 });
 
-document.querySelector('#categorias').addEventListener('change', function() {
-    fetchProdutos();  
+document.querySelector('#categorias').addEventListener('change', function () {
+    fetchProdutos();
 });

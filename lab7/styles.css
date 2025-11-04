@@ -39,7 +39,8 @@ nav ul li a {
     font-weight: bold;
 }
 
-select, input[type="text"] {
+select,
+input[type="text"] {
     padding: 10px;
     margin-top: 10px;
     font-size: 1rem;
@@ -160,4 +161,86 @@ button:hover {
     font-weight: bold;
     margin-top: 20px;
     text-align: center;
+}
+
+#copao {
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-top: 40px;
+    width: 90%;
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+#copao label {
+    font-size: 1rem;
+    color: #333;
+    margin-right: 8px;
+}
+
+#copao input[type="checkbox"] {
+    transform: scale(1.1);
+}
+
+#copao input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    font-size: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    outline: none;
+}
+
+#copao button {
+    margin-top: 15px;
+    background-color: #ff9f00;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    width: 100%;
+    max-width: 250px;
+}
+
+#copao button:hover {
+    background-color: #e68900;
+}
+
+#resultado-compra {
+    display: none;
+    margin-top: 40px;
+    padding: 15px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+#resultado-compra h3 {
+    font-size: 1.4rem;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+#resultado-compra p {
+    font-size: 1.1rem;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+#resultado-compra .preco-final {
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: #ff9f00;
 }
